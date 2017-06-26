@@ -38,7 +38,7 @@ class StackAndQueue: NSObject {
                 pathStack.append(path);
             }
         }
-        //将桟中的数据转化为优化后的路径
+        //将桟中的数据转化为优化后的路径，swift中高阶函数reduce,filter,Map
         let res = pathStack.reduce(""){total,dir in "\(total)/\(dir)"};
         //空路径的结果是“/”
         return res.isEmpty ? "/" : res;
