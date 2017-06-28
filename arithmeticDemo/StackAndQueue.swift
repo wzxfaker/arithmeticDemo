@@ -106,6 +106,99 @@ public class Queue {
     }
 }
 
+//用桟来实现队列
+class MyQueue{
+    var stackA : Stack;
+    var stackB : Stack;
+    
+    var isEmpty : Bool {
+        return stackA.isEmpty && stackB.isEmpty;
+    }
+
+    var peek : Any? {
+        get {
+            shift();
+            return stackB.peek;
+        }
+    }
+    
+    var size : Int {
+        get {
+            return stackA.size + stackB.size;
+        }
+    }
+    
+    init() {
+        stackA = Stack();
+        stackB = Stack();
+    }
+    
+    func enqueue(object : Any) {
+        stackA.push(object);
+    }
+    
+    func dequeue() -> Any? {
+        shift();
+        return stackB.pop();
+    }
+    
+    fileprivate func shift() {
+        if stackB.isEmpty {
+            while !stackA.isEmpty {
+                stackB.push(stackA.pop());
+            }
+        }
+    
+    }
+}
 
 
-
+//用队列实现桟
+class MyStack {
+    var queueA : Queue;
+    var queueB : Queue;
+    
+    init() {
+        queueA = Queue();
+        queueB = Queue();
+    }
+    
+    var isEmpty : Bool {
+        return queueA.isEmpty && queueB.isEmpty;
+    }
+    
+    var peek : Any? {
+        get {
+            shift();
+            let peekObj = queueA.peek;
+            queueB.enqueue(queueA.dequeue()!);
+            swap();
+            return peekObj;
+        }
+    }
+    
+    var size : Int {
+        return queueA.size;
+    }
+    
+    func push(object : Any) {
+        queueA.enqueue(object);
+    }
+    
+    func pop() -> Any? {
+        shift();
+        let popObject = queueA.dequeue();
+        swap();
+        return popObject;
+    }
+    
+    private func shift() {
+        while queueA.size != 1 {
+            queueB.enqueue(queueA.dequeue()!);
+        }
+    }
+    
+    private func swap() {
+        (queueA,queueB) = (queueB,queueA);
+    }
+}
