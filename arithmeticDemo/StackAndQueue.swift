@@ -110,7 +110,7 @@ public class Queue {
 class MyQueue{
     var stackA : Stack;
     var stackB : Stack;
-    
+    //其中stackA作为存储空间，stackB作为临时缓冲区
     var isEmpty : Bool {
         return stackA.isEmpty && stackB.isEmpty;
     }
