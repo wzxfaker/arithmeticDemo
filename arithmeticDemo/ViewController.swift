@@ -263,7 +263,7 @@ class ViewController: UIViewController {
         }
         
         
-        var l = ListEnum<Int>.Empty.insert(x: 2).insert(x: 3).insert(x: 4).insert(x: 5);
+        let l = ListEnum<Int>.Empty.insert(x: 2).insert(x: 3).insert(x: 4).insert(x: 5);
         l.description();
         
 //        l.pop();
@@ -277,6 +277,12 @@ class ViewController: UIViewController {
         let stackTool = StackAndQueue.init();
         print(stackTool.simplifyPath(path: "/a/b/./../d/"));
         print(stackTool.simplifyPath(path: "/a/./b/../../c/"));
+        
+        let tempStack : Stack = Stack.init(arr : [1,2,3,4,5]);
+        print("pop--\(tempStack.pop())");
+        
+        let tempQueue : Queue = Queue.init(arr : [1,2,3,4,5]);
+        print("dequeue--\(tempQueue.dequeue())");
 }
     
     override func didReceiveMemoryWarning() {

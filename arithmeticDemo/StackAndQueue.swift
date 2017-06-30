@@ -55,8 +55,9 @@ public class Stack {
     public var peek : Any?{return stack.last}
     private var stack : [Any];
     
-    public init(){
-        stack = [Any]();
+    public init(arr : [Any]){
+//        stack = [Any]();
+        stack = arr;
     }
     
     //加入一个新元素
@@ -88,8 +89,9 @@ public class Queue {
 
     private var queue : [Any]
 
-    public init(){
-        queue = [Any]();
+    public init(arr : [Any]){
+//        queue = [Any]();
+        queue = arr;
     }
     
     public func enqueue(_ obj : Any){
@@ -129,8 +131,8 @@ class MyQueue{
     }
     
     init() {
-        stackA = Stack();
-        stackB = Stack();
+        stackA = Stack(arr : []);
+        stackB = Stack(arr : []);
     }
     
     func enqueue(object : Any) {
@@ -157,10 +159,10 @@ class MyQueue{
 class MyStack {
     var queueA : Queue;
     var queueB : Queue;
-    
+    //从queueA中出队列然后enqueue到queueB中，知道queueA中剩一个的时候就是peek活着要pop的数据，求peek时再把最后一个enqueue到queueB中就完成了一次复制；求pop时直接return，然后交换queueA和queueB以待下一次操作
     init() {
-        queueA = Queue();
-        queueB = Queue();
+        queueA = Queue(arr : []);
+        queueB = Queue(arr : []);
     }
     
     var isEmpty : Bool {

@@ -17,6 +17,7 @@
 		8422FA451EF8F5E2005256C8 /* ReverseStr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8422FA441EF8F5E2005256C8 /* ReverseStr.swift */; };
 		844A28621EFA58C500CEBC8C /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844A28611EFA58C500CEBC8C /* List.swift */; };
 		848B7BAB1F00CA8000A6E1BC /* StackAndQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848B7BAA1F00CA8000A6E1BC /* StackAndQueue.swift */; };
+		84D311751F064F5C00B9161F /* Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D311741F064F5C00B9161F /* Tree.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		844A28611EFA58C500CEBC8C /* List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
 		844A28631EFA5A8000CEBC8C /* arithmeticDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "arithmeticDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		848B7BAA1F00CA8000A6E1BC /* StackAndQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackAndQueue.swift; sourceTree = "<group>"; };
+		84D311741F064F5C00B9161F /* Tree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tree.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				8422FA441EF8F5E2005256C8 /* ReverseStr.swift */,
 				844A28611EFA58C500CEBC8C /* List.swift */,
 				848B7BAA1F00CA8000A6E1BC /* StackAndQueue.swift */,
+				84D311741F064F5C00B9161F /* Tree.swift */,
 				841EEE2B1EF763BA00DBB989 /* Main.storyboard */,
 				841EEE2E1EF763BA00DBB989 /* Assets.xcassets */,
 				841EEE301EF763BA00DBB989 /* LaunchScreen.storyboard */,
@@ -275,6 +278,7 @@
 				841EEE2A1EF763BA00DBB989 /* ViewController.swift in Sources */,
 				844A28621EFA58C500CEBC8C /* List.swift in Sources */,
 				8422FA451EF8F5E2005256C8 /* ReverseStr.swift in Sources */,
+				84D311751F064F5C00B9161F /* Tree.swift in Sources */,
 				841EEE281EF763BA00DBB989 /* AppDelegate.swift in Sources */,
 				848B7BAB1F00CA8000A6E1BC /* StackAndQueue.swift in Sources */,
 			);
