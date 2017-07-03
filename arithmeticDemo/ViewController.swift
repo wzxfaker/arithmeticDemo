@@ -283,6 +283,7 @@ class ViewController: UIViewController {
         
         let tempQueue : Queue = Queue.init(arr : [1,2,3,4,5]);
         print("dequeue--\(tempQueue.dequeue())");
+        
 }
     
     override func didReceiveMemoryWarning() {

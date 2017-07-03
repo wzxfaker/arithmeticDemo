@@ -16,6 +16,7 @@
 		841EEE481EF763BA00DBB989 /* arithmeticDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841EEE471EF763BA00DBB989 /* arithmeticDemoUITests.swift */; };
 		8422FA451EF8F5E2005256C8 /* ReverseStr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8422FA441EF8F5E2005256C8 /* ReverseStr.swift */; };
 		844A28621EFA58C500CEBC8C /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844A28611EFA58C500CEBC8C /* List.swift */; };
+		846B99371F09DE7700C1AAA5 /* 树.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 846B99361F09DE7700C1AAA5 /* 树.jpg */; };
 		848B7BAB1F00CA8000A6E1BC /* StackAndQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848B7BAA1F00CA8000A6E1BC /* StackAndQueue.swift */; };
 		84D311751F064F5C00B9161F /* Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D311741F064F5C00B9161F /* Tree.swift */; };
 /* End PBXBuildFile section */
@@ -54,6 +55,7 @@
 		8422FA441EF8F5E2005256C8 /* ReverseStr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReverseStr.swift; sourceTree = "<group>"; };
 		844A28611EFA58C500CEBC8C /* List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
 		844A28631EFA5A8000CEBC8C /* arithmeticDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "arithmeticDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		846B99361F09DE7700C1AAA5 /* 树.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "树.jpg"; sourceTree = "<group>"; };
 		848B7BAA1F00CA8000A6E1BC /* StackAndQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackAndQueue.swift; sourceTree = "<group>"; };
 		84D311741F064F5C00B9161F /* Tree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tree.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -112,6 +114,7 @@
 				844A28611EFA58C500CEBC8C /* List.swift */,
 				848B7BAA1F00CA8000A6E1BC /* StackAndQueue.swift */,
 				84D311741F064F5C00B9161F /* Tree.swift */,
+				846B99361F09DE7700C1AAA5 /* 树.jpg */,
 				841EEE2B1EF763BA00DBB989 /* Main.storyboard */,
 				841EEE2E1EF763BA00DBB989 /* Assets.xcassets */,
 				841EEE301EF763BA00DBB989 /* LaunchScreen.storyboard */,
@@ -249,6 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				841EEE321EF763BA00DBB989 /* LaunchScreen.storyboard in Resources */,
+				846B99371F09DE7700C1AAA5 /* 树.jpg in Resources */,
 				841EEE2F1EF763BA00DBB989 /* Assets.xcassets in Resources */,
 				841EEE2D1EF763BA00DBB989 /* Main.storyboard in Resources */,
 			);
