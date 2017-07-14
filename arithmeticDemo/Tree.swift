@@ -47,7 +47,6 @@ class Tree: NSObject {
         return helper(node.left, min, node.val) && helper(node.right, node.val, max);
     }
     
-    
     //遍历树：前序，中序，后序
     //用桟实现前序遍历
     func preOrderTraversal(root : TreeNode?) -> [Int]{
@@ -66,6 +65,21 @@ class Tree: NSObject {
         return res;
     }
     
+    func qianxu (root : TreeNode?) -> [Int] {
+        var res = [Int]();
+        var stack = [TreeNode]();
+        var node = root;
+        if !stack.isEmpty || node != nil{
+            if node != nil {
+                res.append(node!.val);
+                stack.append(node!);
+                node = node!.left;
+            }else{
+                node = stack.removeLast().right;
+            }
+        }
+        return res;
+    }
     
     //层级遍历
     func levelOrder(root : TreeNode?) -> [[Int]] {
