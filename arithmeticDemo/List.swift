@@ -17,7 +17,48 @@ class List: NSObject {
     //用枚举创建链表
 //    let l = ListEnum<Int>.Empty.insert(x: 2).insert(x: 3).insert(x: 4).insert(x: 5);
 //    l.description();
+    /*翻转链表三种方法：
+      a.把所有结点的值取出来放到数组中然后逆序输出，此方法占用内存
+      b.使用三个指针p,q,r交换即可
+      c.对于一条链表，从第2个节点到第N个节点，依次逐节点插入到第1个节点(head节点)之后，(N-1)次这样的操作结束之后将第1个节点挪到新表的表尾即可
+     */
+    func revertList(_ head : ListNode?) -> ListNode?{
+        if head == nil || head?.next == nil {
+            return head;
+        }
+        var p = head;
+        var q = head?.next;
+        head?.next = nil;
+        while (q != nil) {
+            let r = q?.next;
+            q?.next = p;
+            p = q;
+            q = r;
+        }
+        return p;//此时r已经为空了，应返回最后一个
+    }
+    
+    func revertList3(_ head : ListNode?) -> ListNode?{
+        if head == nil || head?.next == nil {
+            return head;
+        }
+        var p : ListNode?;
+        var q : ListNode?;
+        p = head?.next;
+        while p?.next != nil {
+            q = p?.next;
+            p?.next = q?.next;
+            q?.next = head?.next;
+            head?.next = q;
+        }
+        p?.next = head;//此处相当于成环
+        let newHead = p?.next?.next;//新head变成原head的next
+        p?.next?.next = nil;//断掉环
+        return newHead;
+    }
+    
 }
+
 
 extension ListEnum {
     func insert(x : Element) -> ListEnum {
@@ -63,7 +104,7 @@ class ListX{//链表
     
     //尾插法
     func appendToTail(_ val : Int) {
-        if tail == nil {
+        if tail == nil {//链表为空的情况下
             tail = ListNode.init(val);
             head = tail;
         }else{
@@ -74,7 +115,7 @@ class ListX{//链表
     
     //头插法
     func appendToHead(_ val : Int) {
-        if head == nil {
+        if head == nil {//链表为空的情况
             head = ListNode(val);
             tail = head;
         }else{
@@ -165,4 +206,5 @@ func removeNthFromEnd(_ head : ListNode?,_ n : Int) -> ListNode?{
     prev!.next = prev!.next!.next;
     return dummy.next;
 }
+
 

@@ -167,6 +167,24 @@ class ViewController: UIViewController {
         let sortTool = Sort.init();
         let resultArr = sortTool.mergeSort(array: arr);
         print("归并排序--\(resultArr)");
+        
+        
+        //翻转链表
+        let node1=ListNode(10);
+        let node2=ListNode(20);
+        node1.next=node2;
+        let node3=ListNode(30);
+        node2.next=node3;
+        let node4 = ListNode(40);
+        node3.next=node4;
+        let node5 = ListNode(50);
+        node4.next=node5;
+        let listTool = List.init();
+        let tempListNode = listTool.revertList(node1);
+        print("链表翻转2\(tempListNode?.val)->\(tempListNode?.next?.val)");
+        let tempListNode3 = listTool.revertList3(tempListNode);
+        print("链表翻转3\(tempListNode3?.val)->\(tempListNode3?.next?.val)");
+        
 }
     
     override func didReceiveMemoryWarning() {
