@@ -149,7 +149,6 @@ class ViewController: UIViewController {
 //        l.description();
         
         
-        
         //栈和队列
         let stackTool = StackAndQueue.init();
         print(stackTool.simplifyPath(path: "/a/b/./../d/"));
@@ -162,12 +161,21 @@ class ViewController: UIViewController {
         print("dequeue--\(tempQueue.dequeue())");
         
         
+        
         //归并排序
         let arr = [13,2,5,26,10,8];
         let sortTool = Sort.init();
         let resultArr = sortTool.mergeSort(array: arr);
         print("归并排序--\(resultArr)");
-        
+        var arr1 = [13,2,5,26,10,8,1,9];
+        print("选择排序--\(sortTool.selectSort(arr: &arr1))");
+        var arr2 = [65,2,13,2,5,26,10,8,1,9,5,20,11];
+        print("冒泡排序--\(sortTool.bubbleSort(arr: &arr2))");
+        var arr3 = [13,7,3,24,15,1,23,35,30];
+        print("插入排序--\(sortTool.insertSort(arr: &arr3))");
+        var arr4 = [10,8,3,9,15,16,2,1,30];
+        sortTool.quickSort(arr: &arr4, left: 0, right: arr4.count-1);
+        print("快速排序--\(arr4)");
         
         //翻转链表
         let node1=ListNode(10);
