@@ -47,6 +47,7 @@ class Tree: NSObject {
         return helper(node.left, min, node.val) && helper(node.right, node.val, max);
     }
     
+    
     //遍历树：前序，中序，后序
     //用桟实现前序遍历
     func preOrderTraversal(root : TreeNode?) -> [Int]{

@@ -189,10 +189,26 @@ class ViewController: UIViewController {
         node4.next=node5;
         let listTool = List.init();
         let tempListNode = listTool.revertList(node1);
-        print("链表翻转2\(tempListNode?.val)->\(tempListNode?.next?.val)");
+        print("链表翻转2--\(tempListNode?.val)->\(tempListNode?.next?.val)");
         let tempListNode3 = listTool.revertList3(tempListNode);
-        print("链表翻转3\(tempListNode3?.val)->\(tempListNode3?.next?.val)");
+        print("链表翻转3--\(tempListNode3?.val)->\(tempListNode3?.next?.val)");
         
+        //二分查找
+        let bSearchTool = BinarySearch.init();
+        let binaryArr = [1,2,3,4,5,6];
+        let target = 7;
+        print("二分查找--\(bSearchTool.binarySearch(binaryArr, target))");
+        print("二分递归查找--\(bSearchTool.binarySearchRecur(arr: binaryArr, target: 6))");
+        
+        //斐波拉契数列
+        func Fib() -> Int {
+            var (prev,curr) = (0,1);
+            for _ in 1..<10 {
+                (curr,prev) = (curr+prev,curr);
+            }
+            return curr;
+        }
+        print("斐波拉契数列--\(Fib())");
 }
     
     override func didReceiveMemoryWarning() {
