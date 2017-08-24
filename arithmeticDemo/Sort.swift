@@ -30,7 +30,7 @@ class Sort: NSObject {
         guard low < high else {
             return;
         }
-        let middle = (high - low) / 2 + low;
+        let middle = (high - low) / 2 + low;//细节：之所以不用(high+low)/2是因为当数字过大时容易造成溢出
         mergeSort1(&array, &helper, low, middle);
         mergeSort1(&array, &helper, middle+1, high);
         merge(array: &array , helper: &helper, low, middle, high);
